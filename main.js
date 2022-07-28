@@ -37,7 +37,7 @@ function produceMessagesForRange(startN, endN) {
 }
 
 function main() {
-    const messages = produceMessagesForRange(0, 100);
+    const messages = produceMessagesForRange(1, 100);
     console.log(messages.join("\n"));
 }
 
