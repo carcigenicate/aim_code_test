@@ -66,4 +66,10 @@ describe("Number range message producer", () => {
         assert.equal(produceMessagesForRange(2, 1).length, 0);
         assert.equal(produceMessagesForRange(100, 50).length, 0);
     });
+
+    it("should contain the proper messages as decided by fizzBuzzMessage", () => {
+        const messages = produceMessagesForRange(9, 15);
+        const expected = [THREE_MULT_MSG, FIVE_MULT_MSG, "11", THREE_MULT_MSG, "13", "14", FIFTEEN_MULT_MSG];
+        assert.deepEqual(messages, expected);
+    });
 })
