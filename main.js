@@ -23,7 +23,7 @@ function fizzBuzzMessage(n) {
 
 /**
  * Returns an array of all the produced messages for the numbers in the range [startN, endN].
- * Will return an empty array if endN > startN.
+ * Will return an empty array if startN > endN.
  * @param startN The beginning number of the range
  * @param endN The ending number of the range (inclusive)
  * @returns {number[]} The array of produced messages
