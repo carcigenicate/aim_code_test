@@ -41,17 +41,17 @@ describe('Message producer', () => {
     });
 
     it("should raise an error if a non-positive number is passed", () => {
-        assert.throws(() => fizzBuzzMessage(0));
-        assert.throws(() => fizzBuzzMessage(-1));
-        assert.throws(() => fizzBuzzMessage(-10));
+        assert.throws(() => fizzBuzzMessage(0), RangeError);
+        assert.throws(() => fizzBuzzMessage(-1), RangeError);
+        assert.throws(() => fizzBuzzMessage(-10), RangeError);
     });
 
     it("should raise an error if a non-number is passed", () => {
-        assert.throws(() => fizzBuzzMessage("1"));
-        assert.throws(() => fizzBuzzMessage({}));
-        assert.throws(() => fizzBuzzMessage([]));
-        assert.throws(() => fizzBuzzMessage(null));
-        assert.throws(() => fizzBuzzMessage(undefined));
+        assert.throws(() => fizzBuzzMessage("1"), TypeError);
+        assert.throws(() => fizzBuzzMessage({}), TypeError);
+        assert.throws(() => fizzBuzzMessage([]), TypeError);
+        assert.throws(() => fizzBuzzMessage(null), TypeError);
+        assert.throws(() => fizzBuzzMessage(undefined), TypeError);
     });
 })
 

@@ -7,9 +7,9 @@
  */
 function fizzBuzzMessage(n) {
     if (typeof n !== "number") {
-        throw new Error("The passed object must be a number.");
+        throw new TypeError("The passed object must be a number.");
     } else if (n <= 0) {
-        throw new Error("FizzBuzz is only defined for positive integers.");
+        throw new RangeError("FizzBuzz is only defined for positive integers.");
     } else if (n % 15 === 0) {
         return "FizzBuzz";
     } else if (n % 3 === 0) {
